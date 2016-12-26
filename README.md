@@ -18,3 +18,7 @@ npm start
 ```
 
 After launching **Pimp My Page** a browser window will open the [UI](http://localhost:4200). You'll find help to get started in the [help section](http://localhost:4200/help).
+
+Special thanks to [BrowserSync](https://www.browsersync.io/) that powers most of this stuff :heart:
+
+Happy pimpin'

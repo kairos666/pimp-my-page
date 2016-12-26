@@ -4,12 +4,12 @@ const express           = require('express');
 const expressStaticGzip = require("express-static-gzip");
 const chalk             = require('chalk');
 const path              = require('path');
-const open              = require('open');
 const indexFilePath     = path.join(__dirname, 'UI/public/index.html');
 
 class UIServer {
-    constructor(appPort) {
+    constructor(appPort, startedCB) {
         this.appPort = appPort;
+        this.cb      = startedCB;
         this.app     = express();
         this.router  = express.Router();
 
@@ -51,7 +51,7 @@ class UIServer {
     launch() {
         this.app.listen(this.appPort, () => {
             console.log(chalk.blue(`PMP UI server started --> `) + chalk.green(`http://localhost:${this.appPort}`));
-            open(`http://localhost:${this.appPort}`);
+            if(this.cb) this.cb();
         });
     }
 }

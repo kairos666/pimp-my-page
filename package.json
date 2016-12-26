@@ -1,6 +1,6 @@
 {
   "name": "pimp-my-page",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Main PMP project all inclusive (engine, UI, basic plugin)",
   "main": "index.js",
   "scripts": {
@@ -27,7 +27,7 @@
     "express": "^4.14.0",
     "express-static-gzip": "^0.2.2",
     "open": "^0.0.5",
-    "pmp-engine": "^2.3.0",
+    "pmp-engine": "^2.3.1",
     "pmp-plugin-staples": "^0.1.2"
   }
 }
